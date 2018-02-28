@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1><a href="<%= documentation_index_path %>">Documentation</a> » README badge</h1>
+
+      <h2>Quickstart</h2>
+
+      <%= render 'shared/readme_badge_generator', url: 'github.com/motdotla/dotenv' %>
+
+      <h2>Overview</h2>
+
+      <p>This page explains how to create your README badge.</p>
+
+      <p>The README badge provides a way to notify people that your project is accepting donations. They click on the README badge, which takes them to the <a href="<%= donation_page_documentation_index_path %>">donation page</a>.</p>
+
+      <h2>Creating</h2>
+
+      <p>Creating your README badge is easy.</p>
+
+      <ol>
+        <li>Replace <strong>GITHUB_URL</strong> with your project's GitHub url</li>
+        <li>Paste the code into your README file</li>
+      </ol>
+
+<pre>[![Donate with Open Source Citizen](<%= ENV['ROOT_URL'] %>/badge?url=GITHUB_URL)](<%= ENV['ROOT_URL'] %>/project?url=GITHUB_URL)
+
+If you found this library useful, donate some CPU cycles to its
+development efforts by clicking above. Thank you! 😇</pre>
+
+      <h2>Sharing</h2>
+
+      <p>Paste the code into your README page. That's it!</p>
+    </div>
+  </div>
+</div>

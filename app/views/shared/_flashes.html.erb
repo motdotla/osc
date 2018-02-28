@@ -1,0 +1,6 @@
+<% flash.each do |name, msg| -%>
+  <p align="center" class="<%= name %>">
+    <%= name.upcase %>: <%= msg.html_safe %>
+  </p>
+<% end -%>
+

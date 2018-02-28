@@ -1,0 +1,15 @@
+/* Pulse class and keyframe animation */
+.pulse {
+	-webkit-animation: pulse linear 1s infinite;
+	animation: pulse linear 1s infinite;
+}
+@-webkit-keyframes pulse {
+	0% { opacity: 1; } 
+	50% { opacity: .3; } 
+	100% { opacity: 1; }
+}
+@keyframes pulse {
+	0% { opacity: 1; } 
+	50% { opacity: .3; } 
+	100% { opacity: 1; }
+}

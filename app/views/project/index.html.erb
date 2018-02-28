@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Donate</h1>
+
+      <p class="lead"><%= @project.url %></p>
+
+      <p class="lead">Click 'Start Mining' below to start donating to this project.</p>
+
+      <%= render 'shared/miner', project_url: @project.url %>
+
+      <p>Thank you for your crypto currency mining contribution!</p>
+
+      <br/>
+
+      <h2>
+        Share
+        <%= render 'shared/tweet', project_url: @project.url %>
+      </h2>
+
+      <p class="lead">
+        Encourage others to give as well. Tweet your donation.
+      </p>
+
+      <p>
+        <%= render 'shared/tweet', project_url: @project.url %>
+      </p>
+
+      <br/>
+
+      <h2>
+        Hashes raised
+      </h2>
+
+      <p class="lead"><span class="badge"><%= render 'project/shared/hashes', hashes_count: @project.hashes_count, project_url: @project.url %></span> hashes have been contributed to this project and <span class="badge"><%= render 'shared/site_hashes', project_url: @project.url %></span> across all projects!</p>
+
+      <%= render 'shared/powered_by' %>
+
+      <br/>
+      <br/>
+      <hr/>
+      <br/>
+      <br/>
+
+      <h3>Is this your project?</h3>
+
+      <p>We have a README badge for you. Place this on your project to drive people to this page - so they can start donating to your project.</p>
+
+      <br/>
+
+      <%= render 'shared/readme_badge', url: @project.url %>
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+  </div>
+</div>

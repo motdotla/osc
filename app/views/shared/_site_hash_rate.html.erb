@@ -1,0 +1,22 @@
+<span id="site-hash-rate">80</span>
+
+<script>
+  var calculateSiteHashRate = function() {
+    fetch("/v1/stats/balance").then(function(response) {
+      return response.json()
+    }).then(function(json) {
+      var site_hash_rate = json.hashesPerSecond || 0
+
+      document.getElementById('site-hash-rate').innerHTML = numberWithCommas(site_hash_rate)
+    })
+  }
+
+  var numberWithCommas = function(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  }
+
+  calculateSiteHashRate()
+
+  setInterval(calculateSiteHashRate, 60000)
+</script>
+

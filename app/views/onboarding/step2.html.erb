@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>GitHub connected successfully!</h1>
+
+      <h2>Step 2</h2>
+
+      <p>Now we can start adding some of your repositories. Let's start with one now.</p>
+
+      <%= form_for(@new_project, url: '/onboarding/step2/submit') do |f| %>
+        <%= render 'shared/errors', resource: @new_project %>
+
+        <div class="form-group">
+          <%= f.label :url, 'Repository' %>
+          <%= f.collection_select :url, @repos, :html_url, :html_url, { prompt: true }, { class: 'form-control'} %>
+        </div>
+
+        <%= f.submit 'Add project', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>

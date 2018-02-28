@@ -1,0 +1,42 @@
+<form class="readme-badge-generator">
+  <div class="form-group">
+    <label for="github-url">GitHub URL</label>
+    <input name="github-url" type="text" id="github-url" class="form-control github-url" value="<%= url || 'GITHUB_URL' %>">
+  </div>
+
+<pre class="generated-code">[![Donate with Open Source Citizen](<%= ENV['ROOT_URL'] %>/badge?url=<%= url || 'GITHUB_URL' %>)](<%= ENV['ROOT_URL'] %>/project?url=<%= url || 'GITHUB_URL' %>)</pre>
+</form>
+
+<script>
+  $('.readme-badge-generator .github-url').each(function() {
+    var elem = $(this)
+
+    // Save current value of element
+    elem.data('oldVal', elem.val())
+
+    // Look for changes in the value
+    elem.bind("propertychange change click keyup input paste", function(event){
+       // If value has changed...
+       if (elem.data('oldVal') != elem.val()) {
+        // Updated stored value
+        elem.data('oldVal', elem.val())
+        
+        generateCode(elem.val())
+      }
+    })
+  })
+
+  var $generatedCode = $('.generated-code')
+
+  var generateCode = function(githubUrl) {
+    var url = stripProtocol(githubUrl)
+
+    var code = "[![Donate with Open Source Citizen](<%= ENV['ROOT_URL'] %>/badge?url=" + url + ")](<%= ENV['ROOT_URL'] %>/project?url=" + url + ")"
+
+    $generatedCode.html(code)
+  }
+
+  var stripProtocol = function(githubUrl) {
+    return githubUrl.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "");
+  }
+</script>

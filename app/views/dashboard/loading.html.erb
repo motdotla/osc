@@ -1,0 +1,27 @@
+<h3 align="center">Loading your citizenship...</h1>
+
+<%= render 'shared/spinner' %>
+
+<p align="center">
+  Typically takes 30 seconds or less. <a href="/dashboard">Click here</a> if stuck on loading.
+</p>
+
+<script>
+  var hasProjectDataLoaded = function(cb) {
+    return fetch('/v1/poll/have_projects_loaded', { credentials: 'same-origin' }).then(function(response) {
+      return response.json()
+    }).then(function(json) {
+      cb(null, json.success)
+    })
+  }
+
+  $.smartPoller(function(retry) {
+    hasProjectDataLoaded(function(e, result) {
+      if (result) {
+        window.location.href = '/dashboard'
+      } else {
+        retry()
+      }
+    })
+  })
+</script>

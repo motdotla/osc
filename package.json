@@ -1,0 +1,10 @@
+{
+  "name": "osc",
+  "private": true,
+  "dependencies": {
+    "primer": "^10.3.0",
+    "primer-buttons": "^2.5.3",
+    "primer-forms": "^2.1.0",
+    "primer-layout": "^1.4.5"
+  }
+}

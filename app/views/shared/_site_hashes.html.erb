@@ -1,0 +1,31 @@
+<span id="site-hashes">14,323,232</span>
+
+<script>
+  var calculateSiteBalance = function() {
+    fetch("/v1/stats/balance").then(function(response) {
+      return response.json()
+    }).then(function(json) {
+      var site_hashes = json.hashesTotal || 0
+
+      document.getElementById('site-hashes').innerHTML = numberWithCommas(site_hashes)
+    })
+  }
+
+  var incrementSiteBalance = function() {
+    var site_hashes = +document.getElementById('site-hashes').innerHTML
+
+    site_hashes += 1
+
+    document.getElementById('site-hashes').innerHTML = site_hashes
+  }
+
+  var numberWithCommas = function(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  }
+
+  calculateSiteBalance()
+
+  setInterval(calculateSiteBalance, 60000)
+  // setInterval(incrementSiteBalance, 1000)
+</script>
+

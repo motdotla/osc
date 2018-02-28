@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>Join</h1>
+
+      <h2>Step 1</h2>
+
+      <p>Something something about connecting your GitHub.</p>
+
+      <%= link_to 'Connect your GitHub', '/login', class: 'btn btn-primary' %>
+
+      <h2>Step 2</h2>
+
+      <p>Add one of your projects.</p>
+
+      <%= form_tag '/some/url' do %>
+        <%= collection_select :some, :thing, @repos, :html_url, :html_url, include_blank: true %>
+      <% end %>
+
+      <h2>Step 3</h2>
+
+      <p>Add a README badge.</p>
+    </div>
+  </div>
+</div>

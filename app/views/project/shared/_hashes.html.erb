@@ -1,0 +1,27 @@
+<span id="project-hashes"><%= number_with_delimiter(hashes_count || '0') %></span>
+
+<script>
+  var $projectHashes = document.getElementById('project-hashes')
+
+  var calculateProjectBalance = function() {
+    fetch("/v1/project/balance?url=<%= project_url %>").then(function(response) {
+      return response.json()
+    }).then(function(json) {
+      var total = json.total || 0
+
+      $projectHashes.innerHTML = numberWithCommas(total)
+    })
+  }
+
+  var numberWithCommas = function(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  }
+
+  calculateProjectBalance()
+
+  $.smartPoller(function(retry) {
+    calculateProjectBalance()
+    retry()
+  })
+</script>
+

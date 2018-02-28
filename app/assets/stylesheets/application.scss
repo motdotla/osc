@@ -1,0 +1,55 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+// @import "bootstrap-sprockets";
+// @import "bootstrap";
+// @import "bootstrap-overrides";
+// @import "bootstrap-additions";
+// @import "custom";
+// @import "custom/pulse";
+
+@import "custom/spinner";
+
+$black: black;
+$white: #FFFFFF;
+$yellow: #FEF11A;
+$light-blue: SkyBlue;
+$theme-color: #006296;
+$background-color: $white;
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 23px;
+  background-color: $white;
+  background: $background-color;
+  border-top: 4.6px solid $theme-color;
+  min-height: 100%;
+  font-size: 1.4rem;
+}
+
+/* https://www.w3schools.com/w3css/ */
+.error {
+  background-color: $yellow;
+  padding: 9.2px;
+}
+
+.info {
+  background-color: $light-blue;
+  padding: 9.2px;
+}
+
+table, th, td {
+  border: 1px solid $black;
+  border-collapse: collapse;
+	border-spacing: 5px;
+}
+
+th, td {
+  padding: 5px;
+}
+
+th {
+  text-align: left;
+}

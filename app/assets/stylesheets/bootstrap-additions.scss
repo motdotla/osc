@@ -1,0 +1,29 @@
+/**
+ * Extra large button extensions. Extends `.btn`.
+ */
+.btn-xlg {
+  padding: 18px 28px;
+  font-size: 22px;
+  line-height: normal;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+}
+
+.btn-space {
+  margin-right: 9px;
+}
+
+@media all and (max-width:480px) {
+  .btn-block-smart {
+    width: 100%;
+    display: block;
+    margin-bottom: 9px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pull-right-lg {
+    float: right;
+  }
+}

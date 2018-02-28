@@ -1,0 +1,49 @@
+<h1>Give a hash</h1>
+
+<ul>
+  <li>
+    Hashes/s <span id="hashes-per-second"></span>
+  </li>
+  <li>
+    Total <span id="total-hashes"></span>
+  </li>
+</ul>
+
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+<script>
+  // Configure CoinHive to point to your proxy
+  CoinHive.CONFIG.WEBSOCKET_SHARDS = [["ws://localhost:8892"]];
+
+  // Start miner
+  var miner = new CoinHive.Anonymous('<%= ENV['WALLET_ADDRESS'] %>');
+  miner.start();
+
+  var updateStats = function() {
+    document.getElementById('hashes-per-second').innerHTML = this.getHashesPerSecond().toFixed(1)
+    document.getElementById('total-hashes').innerHTML = this.getTotalHashes(true)
+  }
+
+  var intervalUpdateStats = setInterval(updateStats.bind(miner), 50);
+</script>
+
+<!--
+<script src="https://proxy-cvzxvnskhi.now.sh/client?proxy"></script>
+<script>
+  var miner = new CoinHive.Anonymous('wallet-address-here');
+  miner.start();
+
+  document.getElementById('hashes-per-second').innerHTML = 'hi'
+
+  var updateStats = function() {
+    console.log(this.getHashesPerSecond().toFixed(1))
+
+    //document.getElementById('hashes-per-second').innerHTML = this.getHashesPerSecond().toFixed(1)
+    // document.getElementById('total-hashes').innerHTML = this.getTotalHashes(true)
+  }
+
+  var intervalUpdateStats = setInterval(updateStats.bind(miner), 50);
+
+  // console.log(miner.getHashesPerSecond().toFixed(1)
+  // miner.getTotalHashes()
+</script>
+-->

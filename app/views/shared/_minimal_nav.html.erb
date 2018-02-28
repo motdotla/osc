@@ -1,0 +1,10 @@
+<nav class="navbar navbar-default navbar-static-top navbar-minimal">
+  <div class="container">
+    <div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="<%= @project.try(:linkable_url) || root_url %>"><%= @project.try(:url) || 'Open Source Citizen' %></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+

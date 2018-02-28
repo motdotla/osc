@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1><a href="<%= documentation_index_path %>">Documentation</a> » Donation page</h1>
+
+      <h2>Quickstart</h2>
+
+      <p>
+        <a href="<%= project_new_path %>" class="btn btn-large btn-success">Add project</a>
+      </p>
+
+      <h2>Overview</h2>
+
+      <div class="pull-right documentation-miner-example">
+        <%= render 'shared/miner', project_url: 'github.com/motdotla/dotenv' %>
+        <p class="text-center"><em>Demo of the miner UI on a donation page.</em></p>
+      </div>
+
+      <p>This page explains how to create your project donation page.</p>
+
+      <p>The project donation page loads a crypto currency miner as an iframe into a <code>&lt;div&gt;</code> element on your page. Donors click START MINING to mine for crypto currency in the browser.</p>
+
+      <h2>Creating</h2>
+
+      <p>Creating your donation page is easy.<p>
+      <ol>
+        <li> Click <a href="<%= project_new_path %>">add project</a></li>
+        <li>Paste your project's GitHub URL</li>
+        <li>Submit the form</li>
+      </ol>
+
+      <h2>Sharing</h2>
+
+      <p>Share the url of your donation page by emailing it, tweeting it, or posting it on a mailing list. Donors click it and start mining.</p>
+
+      <p>They can customize their CPU settings and leave the tab open for a day or two. If enough users do this, you will see some reasonable donation levels to help monetarily support your open source project.</p>
+
+      <h2>Details</h2>
+
+      <p>Sparing the minutiae, mining for crypto currency is a process of guessing a hash. To do this, your CPU generates thousands of hashes a minute.</p>
+
+      <p>When you use <abbr title="Open Source Citizen">OSC</abbr>, you are combining the power of 10s to 1,000s of donors' machines to contribute to guessing that hash. The greater number of hashes generated, the greater your project's share in the donation pool. Therefore, the greater the amount of crypto currency your project will earn.</p>
+
+      <p>If you have a popular open source library, your network is likely to be very large, and your potential for donations will also likely be large. But even if you have a less popular library, you stand to make a little extra money for your hard work and you also help spread the word about <abbr title="Open Source Citizen">OSC</abbr>. The more we can enable others to give back to open source the more open source can flourish.</p>
+
+      <p><abbr title="Open Source Citizen">OSC</abbr> currently mines for the Monero Blockchain (<a href="#why-monero">Why Monero?</a>).</p>
+
+      <h2 id="why-monero">Why Monero?</h2>
+
+      <p>Monero uses a different mining algorithm than Bitcoin. It uses an algorithm called Cryptonight. It's a compute heavy algorithm and was designed to run well on consumer machines (Bitcoin does not run well on consumer machines).</p>
+
+      <p>This makes Monero a great choice for donating since it evens the playing field - making it possible for normal developers with CPU based machines to donate back to a project they love at a relatively equal level.</p>
+    </div>
+  </div>
+
+</div>

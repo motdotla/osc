@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>Add your project</h1>
+      <br/>
+      <p class="lead">
+        Enter your project's open source url, typically a GitHub url. 
+      </p>
+
+      <%= form_for @new_project, url: project_path do |f| %>
+        <%= render 'shared/errors', resource: @new_project %>
+
+        <div class="form-group">
+          <%= f.label :url, 'URL' %>
+          <%= f.text_field :url, class: 'form-control input-lg', placeholder: 'https://github.com/robbyrussell/oh-my-zsh' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit 'Add project', class: 'btn btn-primary btn-lg btn-block' %>
+          <span class="help-block">
+            This will create a shareable donation page for your project. When other's visit it, they can donate to your project.
+          </span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

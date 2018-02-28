@@ -1,0 +1,220 @@
+<p>
+  Open Source Citizen (OSC) is an economic citizenship experiment aiming to increase economic participation in open source software.
+</p>
+
+<p>
+  Find everything you need to get started below.
+</p>
+
+<dl>
+  <dt>
+    <a href="/getstarted">Become a Citizen</a>
+    <dd>Use your GitHub or Bitbucket account to become a citizen.</dd>
+  </dt>
+
+  <dt>
+    <a href="/run/node">Run a Node</a>
+    <dd>Run a node to contribute economically</dd>
+  </dt>
+
+  <dt>
+    <a href="/nodes">Nodes</a>
+    <dd>List of nodes and their statuses</dd>
+  </dt>
+
+  <dt>
+    <a href="/dashboard">My Citizenship</a>
+    <dd>Manage your citizenship - economic contributions and profits.</dd>
+  </dt>
+
+	<% if current_user %>
+		<dt>
+			<a href="/logout">Log out</a>
+			<dd>
+				End the current session
+			</dd>
+		</dt>
+	<% else %>
+		<dt>
+			<a href="/login">Log in</a>
+			<dd>If you have already joined as a citizen.</dd>
+		</dt>
+	<% end %>
+</dl>
+
+<!--
+
+Those that create open source software should be rewarded for doing so.
+
+Those who use open source software should 
+
+But the nature of open source software is such that copying it is easy and as a result economic attribution often goes unattributed.
+
+Furthermore, the nature of open source results in the most open of software being the most successsful. But part of being open is to be free. And so, often, the best software goes unrewarded when it becomes wildly successful.
+
+Instead, this should be rewarded. 
+
+Ideally, this should be rewarded with small micro payments. This is difficult to do with modern tools - except for cryptocurrencies.
+
+<dl>
+  <dt>
+    <a href="/">Download</a>
+    <dd>Download to get started</dd>
+  </dt>
+  <dt>
+    <a href="/">How does it work?</a>
+    <dd>Information on how it works</dd>
+  </dt>
+  <dt>
+    <a href="/">Contribute</a>
+    <dd>Instructions on how to easily contribute</dd>
+  </dt>
+
+  <dt>
+    <a href="/">How do I become a citizen?</a>
+    <dd>Information on becoming a citizen</dd>
+  </td>
+</dl>
+
+
+
+
+
+
+
+
+        Open source citizen allows open source developers like you to get paid by running a <strong>cryptocurrency donation mining pool</strong> on behalf of your libraries.
+
+
+
+
+Pointers to the world's online information, subjects , W3 servers, etc.
+Help
+on the browser you are using
+Software Products
+A list of W3 project components and their current state. (e.g. Line Mode ,X11 Viola , NeXTStep , Servers , Tools , Mail robot , Library )
+Technical
+Details of protocols, formats, program internals etc
+Bibliography
+Paper documentation on W3 and references.
+People
+A list of some people involved in the project.
+History
+A summary of the history of the project.
+How can I help ?
+If you would like to support the web..
+Getting code
+Getting the code by anonymous FTP , etc.
+
+<h1><%= ENV['TAGLINE'] %></h1>
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1><%= ENV['TAGLINE'] %></h1>
+
+        <a class="btn btn-default btn-xlg btn-space btn-block-smart" href="#how-it-works" role="button">How it works</a>
+        <a class="btn btn-success btn-xlg btn-space btn-block-smart" href="<%= project_new_path %>" role="button">Add my project</a>
+      </div>
+      <div class="col-md-5">
+        <div class="pull-right-lg hero-miner">
+          <%= render 'shared/miner', project_url: 'opensourcecitizen.org' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <p class="text-center catchphrase">
+        Open source citizen allows open source developers like you to get paid by running a <strong>cryptocurrency donation mining pool</strong> on behalf of your libraries.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="how-it-works" class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="text-center">How It Works</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3 class="text-center">Step 1</h3>
+      <a href="<%= project_new_path %>" class="thumbnail">
+        <%= image_tag 'add-your-project-screenshot.png' %>
+      </a>
+      <p class="lead">
+        Enter your GitHub project url. A donation page is automatically created for you and includes information on how to share the page.
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-center">Step 2</h3>
+      <a href="<%= help_path %>" class="thumbnail">
+        <%= image_tag 'readme-badge-screenshot.png' %>
+      </a>
+      <p class="lead">
+        Place it on your README, tweet it out, or post it in your mailing list so that users can start donating CPU cycles.
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-center">Step 3</h3>
+      <a href="<%= project_path(url: 'github.com/motdotla/dotenv') %>" class="thumbnail">
+        <%= image_tag 'miner-running.gif' %>
+      </a>
+      <p class="lead">
+        Users spare some CPU cycles, generating hashes, to give back to your project. They don't need a credit card, they don't even need a bank account.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center">Projects earning on Open Source Citizen</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-2">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <strong>dotenv</strong> is a popular node library.
+            <br/>
+            Donors have contributes 800k hashes to its project and counting.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <strong>dotenv</strong> is a popular node library.
+            <br/>
+            Donors have contributes 800k hashes to its project and counting.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<%#= render 'shared/add_your_project_jumbo' %>
+
+
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="text-center"><%= render 'shared/site_hashes' %> hashes donated and counting!</h2>
+      <h2 class="text-center">The community is currently donating <%= render 'shared/site_hash_rate' %> hashes/second.</h2>
+    </div>
+  </div>
+</div>
+-->

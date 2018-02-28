@@ -1,0 +1,99 @@
+<h1>Earn money for your open source projects. No credit card, no bank account needed.</h1>
+
+<!-- <p>Users donate to open source software by mining cryptocurrency.</p> -->
+
+<p>Users contribute their CPU cycles and you get paid in <a href="https://www.monero.how/why-monero-vs-bitcoin">Monero</a>.</p>
+
+<h2 class="text-center">How it works</h2>
+
+<%= render 'shared/miner', project_url: 'opensourcecitizen.org' %>
+
+<p>Click 'Start Mining' above. That's it! Your donors don't have to enter a credit card. They don't even need a bank account. And they can be from anywhere in the world. 🌍</p>
+
+<p>It is the easiest way for people to donate to open source software. <strong>Add your project and start earning today.</strong></p>
+
+<h1>Add your project</h1>
+
+<h2>1. Generate your project link</h2>
+
+<p>
+  <strong>Your project's repository url:</strong>
+  <%= text_field_tag :project_url, nil, placeholder: 'github.com/username/project', id: 'project_url_input' %>
+</p>
+
+<button type="link" id="button">Generate project link ↓</button>
+
+<pre id="link">Your link will appear here!</pre>
+
+<h2>2. Copy and paste the link on another tab for testing</h2>
+
+<p>You can try this link in another tab before you share it.</p>
+
+<h2>3. Share the link</h2>
+
+<p>Now your users can contribute to your project by donating hashes and you can earn Monero.</p>
+
+<p>
+  <a id="link2" href="" target="_blank"></a>
+</p>
+
+<script>
+  var link = document.getElementById('link')
+  var link2 = document.getElementById('link2')
+  var button = document.getElementById('button')
+  var project_url_input = document.getElementById('project_url_input')
+
+  button.addEventListener('click', function() {
+    var ready_url = "<%= ENV['ROOT_URL'] %>/project?url=" + project_url_input.value
+
+    link.innerHTML = ready_url
+    link2.innerHTML = ready_url
+    link2.href = ready_url
+  })
+</script>
+
+<h1>
+  Stats
+</h1>
+
+<h2>
+  Hashes: <%= render 'shared/site_hashes' %>
+</h2>
+
+<h2>
+  Projects: <%= render 'shared/project_count' %>
+</h2>
+
+<h1>
+  Quotes
+</h1>
+
+<p>
+  Add quotes from people talking about how great it is. and how it has helped pay for their open source.
+</p>
+
+<h1>
+  Awesome projects
+</h1>
+
+<p>
+  List awesome projects already using Give a Hash
+</p>
+
+<h1>Add your project</h1>
+
+<p>
+  Intersperse a simpler form to add your project
+</p>
+
+<h1>Team</h1>
+
+<p>
+  Show the team behind the project.
+</p>
+
+<h1>Footer</h1>
+
+<p>
+  Add footer nav with more info. Fill this out over time with more and more links to useful info, to display legitimacy.
+</p>

@@ -1,0 +1,19 @@
+<h1>Nodes (<%= @nodes.count %>)</h1>
+
+<table width="100%">
+  <caption>List of nodes and their individual statuses. Current time is <%= Time.now.utc.strftime('%b %e, %l:%M %p UTC') %></caption>
+  <thead>
+    <tr class="w3-blue">
+      <th>Identifier</th>
+      <th>Last seen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @nodes.each do |node| %>
+      <tr>
+        <td><abbr title="<%= node.machine_id %>"><%= node.abbr_machine_id %></abbr></td>
+        <td><%= node.last_seen_at.strftime('%b %e, %l:%M %p UTC') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

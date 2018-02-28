@@ -1,0 +1,49 @@
+<h1>My Citizenship</h1>
+
+<p>
+  Welcome back <strong>Citizen <%= current_user.id %>.</strong> Manage your open source citizenship from this page.
+</p>
+
+<dl>
+  <dt>
+    <a href="<%= current_user.profile_photo_url %>">Citizen Photo</a>
+    <dd>
+      View your citizen photo
+    </dd>
+  </dt>
+  <dt>
+    <a href="/run/node">Run a Node</a>
+    <dd>
+      Run a node to contributing economically
+    </dd>
+  </dt>
+  <!--
+  <dt>
+    <a href="">Participation</a>
+    <dd>
+      View your participation in the open source software economy
+    </dd>
+  </dt>
+  -->
+  <dt>
+    <a href="/dashboard/projects">Projects</a>
+    <dd>
+      View your project contributions and their economic earnings
+    </dd>
+  </dt>
+  <!--
+  <dt>
+    <a href="">Claim</a>
+    <dd>
+      Convert economic earnings to your wallet
+    </dd>
+  </dt>
+  -->
+  <dt>
+    <a href="/logout">Log out</a>
+    <dd>
+      End the current session
+    </dd>
+  </dt>
+
+</dl>

@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1>Donate</h1>
+
+      <p class="lead"><%= @project.url %></p>
+
+      <br/>
+      <br/>
+
+      <%= render 'shared/miner', project_url: @project.url %>
+
+      <br/>
+      <br/>
+      <br/>
+
+      <p class="lead">Click 'Start Mining' above to start donating to this project.</p>
+      <p class="lead">Thank you for your crypto currency mining contribution!</p>
+
+      <br/>
+      <br/>
+      <p>powered by</p>
+      <p><a href="<%= root_path %>">Open Source Citizen</a></p>
+    </div>
+  </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<hr/>
+
+<h1>Be a good open source citizen. Donate some of your computer's CPU cycles to help support this open source project.</h1>
+
+<div class="project">
+  <h2><%= @project.url %></h2>
+
+  <div class="content">
+    <p>Click <strong>Start Mining</strong> to donate to this project.</p>
+
+    <%= render 'shared/miner', project_url: @project.url %>
+
+    <p>Thank you for giving back to open source efforts.</p>
+
+    <p>The community has contributed <strong><%= render 'project/shared/hashes', project_url: @project.url %></strong> hashes to this project and <strong><%= render 'shared/site_hashes', project_url: @project.url %></strong> across all open source software!</p>
+
+  </div>
+</div>
+
+<h2>Is this your project?</h2>
+
+<p>We have README badges for you! Place this on your project to drive people to this page - so they can start donating to your project.</p>
+
+<%= render 'shared/badge', url: @project.url %>
+

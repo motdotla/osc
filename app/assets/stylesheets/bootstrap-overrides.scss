@@ -1,0 +1,45 @@
+$primary-color: #1b6494;
+$inverse-color: #FFFFFF;
+
+.navbar {
+  background-color: white;
+  margin: 0; /*removes bottom whitespace*/
+  border-bottom: 6px solid $primary-color;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $primary-color;
+}
+
+.navbar-default .navbar-brand {
+  color: $primary-color;
+  padding-top: 8px;
+  padding-bottom: 0;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: $primary-color;
+  text-decoration: underline;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: $primary-color;
+  text-decoration: underline;
+}
+
+.jumbotron {
+  background-color: $primary-color;
+  color: $inverse-color;
+}
+
+.jumbotron h1 {
+  font-size: 53px;
+  margin-bottom: 28px;
+}
+
+@media all and (max-width:480px) {
+  .jumbotron h1 {
+    font-size: 43px;
+  }
+}
+

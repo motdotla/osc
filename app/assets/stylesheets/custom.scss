@@ -1,0 +1,65 @@
+.coinhive-miner {
+  border: 5px solid #D8D8D8;
+  border-top: 1px solid #D8D8D8;
+  border-left: 1px solid #D8D8D8;
+}
+
+.col-centered {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.catchphrase {
+  font-size: 26px;
+  margin-bottom: 63px;
+}
+
+.navbar-bottom {
+	border-bottom: none;
+}
+
+.navbar-minimal {
+  background: $primary-color;
+  color: $inverse-color;
+}
+
+.navbar-minimal .navbar-brand {
+  color: $inverse-color;
+}
+
+.navbar-minimal .navbar-brand:hover {
+  color: $inverse-color;
+}
+
+.navbar-minimal .navbar-nav > li > a {
+  color: $inverse-color;
+}
+
+.navbar-minimal .navbar-nav > li > a:hover {
+  color: $inverse-color;
+}
+
+.navbar-minimal {
+  border-bottom: none;
+}
+
+.hero-miner {
+  padding-top: 23px;
+}
+
+pre.code-display {
+  background: none;
+  border: none;
+  margin: 0;
+  padding-left: 0;
+
+  kbd {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+
+.documentation-miner-example {
+  margin-left: 23px;
+}
+

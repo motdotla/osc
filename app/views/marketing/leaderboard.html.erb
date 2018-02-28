@@ -1,0 +1,21 @@
+<h1>Leaderboard (<%= @users.count %>)</h1>
+
+<table width="100%">
+  <caption>Organized by highest to lowest economic contributions per citizen.</caption>
+  <thead>
+    <tr class="w3-blue">
+      <th>Position</th>
+      <th>Citizen</th>
+      <th>Economic Contributions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each_with_index do |user, index| %>
+      <tr>
+        <td><%= index + 1 %></td>
+        <td>Citizen <%= user.id %></td>
+        <td><%= number_with_delimiter user.hashes_count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

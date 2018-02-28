@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1>Documentation</h1>
+
+      <h2>Quickstart</h2>
+
+      <p>
+        To use <%= render 'shared/osc' %>, <a href="<%= project_new_path %>">add your project</a>. A donation page will be generated for your project. Here is an <a href="<%= project_path(url: 'github.com/motdotla/dotenv') %>">example</a>.
+      </p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2><a href="<%= donation_page_documentation_index_path %>">Donation page</a></h2>
+
+          <p>The easiest way to get started with <%= render 'shared/osc' %> and let users start donating to your project.</p>
+
+          <p>
+            <a href="<%= donation_page_documentation_index_path %>">view docs</a>
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <h2><a href="<%= readme_badge_documentation_index_path %>">README badge</a></h2>
+
+          <p>The best way to alert developers to donate your to open source project.</p>
+
+          <p>
+            <a href="<%= readme_badge_documentation_index_path %>">view docs</a>
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <h2>Chrome plugin</h2>
+
+          <p>The best way to maintain and support recurring donations from committed donors.</p>
+
+          <p>Coming soon.</p>
+        </div>
+
+        <div class="col-md-6">
+          <h2>Fair payouts</h2>
+
+          <p>We are actively working on automating the payment process. Until then, please contact us at <%= render 'shared/email' %> to claim your earnings.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

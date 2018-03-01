@@ -40,6 +40,14 @@ RSpec.describe FindOrCreateNode, type: :model do
 
         expect { service.run }.to change(Node, :count).by(1)
       end
+
+      it 'sends a slack notification' do
+        service.machine_id = 'some-different-id'
+
+        expect(service).to receive(:deliver_slack_notification)
+
+        service.run
+      end
     end
   end
 end

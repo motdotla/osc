@@ -6,7 +6,7 @@ class MarketingController < ApplicationController
   end
 
   def nodes
-    @nodes = Node.order('pinged_at ASC, created_at ASC') 
+    @nodes = Node.order('pinged_at DESC, created_at DESC') 
   end
 
   def badge

@@ -4,6 +4,8 @@
 
 OSC is an economic citizenship experiment aiming to increase economic participation in open source software.
 
+This repo powers the OSC platform.
+
 [![Become a Citizen](http://www.opensourcecitizen.org/badge)](http://www.opensourcecitizen.org/)
 
 ## Development

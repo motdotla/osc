@@ -27,7 +27,11 @@ class FindOrCreateNode
 
   def create_node
     @node ||= begin
-      Node.create!(node_attrs)
+      node = Node.create!(node_attrs)
+
+      deliver_slack_notification
+
+      node
     rescue ActiveRecord::RecordInvalid
       nil
     end
@@ -38,5 +42,9 @@ class FindOrCreateNode
       machine_id: machine_id,
       pinged_at: Time.now.utc
     }.compact
+  end
+
+  def deliver_slack_notification
+    DeliverSlackNotificationJob.perform_later(machine_id)
   end
 end

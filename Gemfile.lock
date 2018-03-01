@@ -45,12 +45,7 @@ GEM
     airbrake-ruby (2.5.0)
     arel (8.0.0)
     ast (2.3.0)
-    autoprefixer-rails (7.1.6)
-      execjs
     bindex (0.5.0)
-    bootstrap-sass (3.3.7)
-      autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.1.0)
     capybara (2.15.4)
@@ -278,7 +273,6 @@ PLATFORMS
 
 DEPENDENCIES
   airbrake (~> 7.1)
-  bootstrap-sass (~> 3.3.7)
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)

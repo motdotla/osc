@@ -1,4 +1,8 @@
-# README
+# Open Source Citizen (OSC)
+
+<img src="https://raw.githubusercontent.com/motdotla/osc/master/osc.png" alt="OSC Logo" align="right" />
+
+OSC is an economic citizenship experiment aiming to increase economic participation in open source software.
 
 ## Development
 
